@@ -1,0 +1,102 @@
+@use "../utilities/mixins" as *;
+
+.home {
+  background: url("../img/home/background-home-desktop.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+
+  @include breakpoints-down(medium) {
+    background: url("../img/home/background-home-tablet.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  @include breakpoints-down(small) {
+    background: url("../img/home/background-home-mobile.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &-container {
+    max-width: 1130px;
+    margin: 0 auto;
+    padding: 387px 10px 131px;
+    color: var(--white);
+    @include flex(space-between, end);
+
+    @include breakpoints-down(medium) {
+      flex-wrap: wrap;
+      width: 470px;
+      padding: 202px 10px 90px;
+      justify-content: center;
+      text-align: center;
+    }
+    @include breakpoints-down(small) {
+      width: 347px;
+      padding: 112px 10px 48px;
+    }
+  }
+
+  // == home content ==
+  &-content {
+    width: 100%;
+    max-width: 450px;
+
+    @include breakpoints-down(medium) {
+      margin-bottom: 156px;
+    }
+    @include breakpoints-down(small) {
+      margin-bottom: 81px;
+    }
+  }
+
+  // == home subtitle ==
+  &-subtitle {
+    color: var(--light);
+    margin-bottom: 24px;
+
+    @include breakpoints-down(small) {
+      margin-bottom: 16px;
+    }
+  }
+
+  // == home heading ==
+  &-heading {
+    margin-bottom: 24px;
+
+    @include breakpoints-down(small) {
+      margin-bottom: 16px;
+    }
+  }
+
+  // == home btn ==
+  &-btn {
+    display: inline-block;
+    width: 274px;
+    height: 274px;
+    border-radius: 100%;
+    font-size: 3.2rem;
+    font-family: var(--font-heading);
+    line-height: 23px;
+    background: var(--white);
+    color: var(--dark);
+    @include flex(center, center);
+    transition: all 0.3s ease-in;
+    outline: 0;
+
+    &:hover {
+      outline: 22px solid #979797;
+    }
+
+    @include breakpoints-down(medium) {
+      width: 242px;
+      height: 242px;
+      font-size: 2rem;
+    }
+
+    @include breakpoints-down(small) {
+      width: 150px;
+      height: 150px;
+    }
+  }
+}

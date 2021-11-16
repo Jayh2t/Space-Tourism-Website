@@ -1,0 +1,107 @@
+@use "../utilities/mixins" as *;
+
+.heading-1 {
+  --h1-lineheight: 172px;
+  @include breakpoints-down(medium) {
+    --h1-lineheight: 150px;
+  }
+  @include breakpoints-down(small) {
+    --h1-lineheight: 100px;
+  }
+  font-size: var(--fs-heading-1);
+  font-family: var(--font-heading);
+  font-weight: 400;
+  line-height: var(--h1-lineheight);
+}
+.heading-2 {
+  --h2-lineheight: 115px;
+  @include breakpoints-down(medium) {
+    --h2-lineheight: 92px;
+  }
+  @include breakpoints-down(small) {
+    --h2-lineheight: 64px;
+  }
+  font-size: var(--fs-heading-2);
+  line-height: var(--h2-lineheight);
+  font-family: var(--font-heading);
+  font-weight: 400;
+}
+.heading-3 {
+  --h3-lineheight: 64px;
+  @include breakpoints-down(medium) {
+    --h3-lineheight: 46px;
+  }
+  @include breakpoints-down(small) {
+    --h3-lineheight: 28px;
+  }
+  font-size: var(--fs-heading-3);
+  font-family: var(--font-heading);
+  font-weight: 400;
+  line-height: var(--h3-lineheight);
+}
+.heading-4 {
+  --h4-lineheight: 37px;
+  @include breakpoints-down(medium) {
+    --h4-lineheight: 28px;
+  }
+  @include breakpoints-down(small) {
+    --h4-lineheight: 18px;
+  }
+  font-size: var(--fs-heading-4);
+  font-family: var(--font-heading);
+  font-weight: 400;
+  line-height: var(--h4-lineheight);
+}
+.heading-5 {
+  --h5-lineheight: 34px;
+  @include breakpoints-down(medium) {
+    --h5-lineheight: 24px;
+  }
+  @include breakpoints-down(small) {
+    --h5-lineheight: 24px;
+  }
+  font-size: var(--fs-heading-5);
+  font-family: var(--font-secondary);
+  font-weight: 400;
+  line-height: var(--h5-lineheight);
+  letter-spacing: 4.725px;
+
+  span {
+    color: #979797;
+    font-weight: 700;
+    margin-right: 24px;
+
+    @include breakpoints-down(small) {
+      margin-right: 16px;
+    }
+  }
+}
+.subheading-1 {
+  --sh1-lineheight: 32px;
+  font-size: var(--fs-subheading-1);
+  font-family: var(--font-heading);
+  font-weight: 400;
+  line-height: var(--sh1-lineheight);
+}
+.subheading-2 {
+  --sh2-lineheight: 17px;
+  font-size: var(--fs-subheading-2);
+  font-family: var(--font-secondary);
+  font-weight: 400;
+  line-height: var(--sh2-lineheight);
+  letter-spacing: 2.3625px;
+  color: var(--light);
+}
+.bodytext {
+  --bd-lineheight: 32px;
+  @include breakpoints-down(medium) {
+    --bd-lineheight: 28px;
+  }
+  @include breakpoints-down(small) {
+    --bd-lineheight: 25px;
+  }
+  font-size: var(--fs-body);
+  font-weight: 400;
+  line-height: var(--bd-lineheight);
+  color: var(--light);
+}

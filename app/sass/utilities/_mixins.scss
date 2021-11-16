@@ -1,0 +1,63 @@
+// pseudo element
+@mixin pseudo(
+  $loc: after,
+  $pos: absolute,
+  $top: 0,
+  $left: 0,
+  $right: 0,
+  $bottom: 0
+) {
+  position: relative;
+
+  &::#{$loc} {
+    content: "";
+    position: $pos;
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+    right: $right;
+    @content;
+  }
+}
+
+// use flex
+@mixin flex($jc, $ai, $gap: 0) {
+  display: flex;
+  // flex-wrap: wrap;
+  justify-content: $jc;
+  align-items: $ai;
+  gap: $gap;
+}
+
+// use responsive
+// 640px, 1024px, 1400px
+$breakpoint-up: (
+  "medium": "640px",
+  "large": "1024px",
+  "xlarge": "1400px",
+);
+// 639px, 1023px, 1399px
+$breakpoint-down: (
+  "small": "639px",
+  "medium": "1023px",
+  "large": "1399px",
+);
+// for max-width
+@mixin breakpoints-down($size) {
+  @media (max-width: map-get($breakpoint-down, $size)) {
+    @content;
+  }
+}
+// for min-width
+@mixin breakpoints-up($size) {
+  @media (min-width: map-get($breakpoint-up, $size)) {
+    @content;
+  }
+}
+
+// for tablet
+@mixin mq-tablet($tablet) {
+  @media (min-width: map-get($breakpoint-up, $tablet)) and (max-width: map-get($breakpoint-down, $tablet)) {
+    @content;
+  }
+}

@@ -1,0 +1,39 @@
+@use "mixins" as *;
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap");
+
+:root {
+  // ==== fontfamily variables ====
+  --font-primary: "Barlow", sans-serif;
+  --font-heading: "Bellefair", serif;
+  --font-secondary: "Barlow Condensed", sans-serif;
+  // ==== fontsize variables ====
+  --fs-body: 1.8rem;
+  --fs-heading-1: 15rem;
+  --fs-heading-2: 10rem;
+  --fs-heading-3: 5.6rem;
+  --fs-heading-4: 3.2rem;
+  --fs-heading-5: 2.8rem;
+  --fs-subheading-1: 2.8rem;
+  --fs-subheading-2: 1.4rem;
+
+  @include breakpoints-down(medium) {
+    --fs-heading-2: 8rem;
+    --fs-heading-3: 4rem;
+    --fs-heading-4: 2.4rem;
+    --fs-heading-5: 2rem;
+    --fs-body: 1.6rem;
+  }
+
+  @include breakpoints-down(small) {
+    --fs-heading-1: 8rem;
+    --fs-heading-2: 5.6rem;
+    --fs-heading-3: 2.4rem;
+    --fs-heading-4: 1.6rem;
+    --fs-body: 1.5rem;
+  }
+
+  // ==== colors variables ====
+  --white: #fff;
+  --light: #d0d6f9;
+  --dark: #0b0d17;
+}

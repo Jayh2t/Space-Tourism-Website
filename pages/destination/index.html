@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space Tourism Website</title>
+    <link rel="stylesheet" href="../../dist/style/main.css" />
+  </head>
+  <body>
+    <!-- ==== Start Header ==== -->
+    <header class="header">
+      <div class="header-container">
+        <nav class="header-navigation">
+          <!-- == start logo == -->
+          <div class="logo">
+            <a href="../../index.html">
+              <img
+                src="../../dist/img/shared/logo.svg"
+                alt="Space Tourism Website Logo"
+              />
+            </a>
+          </div>
+          <!-- == end logo == -->
+          <!-- == start menu == -->
+          <ul class="menu">
+            <li class="menu-item">
+              <a class="menu-link" href="../../index.html">
+                <span>00</span>
+                HOME
+              </a>
+            </li>
+            <li class="menu-item active">
+              <a class="menu-link" href="./index.html">
+                <span>01</span>
+                DESTINATION
+              </a>
+            </li>
+            <li class="menu-item">
+              <a class="menu-link" href="../crew/index.html">
+                <span>02</span>
+                CREW
+              </a>
+            </li>
+            <li class="menu-item">
+              <a class="menu-link" href="../technology/index.html">
+                <span>03</span>
+                TECHNOLOGY
+              </a>
+            </li>
+          </ul>
+          <!-- == end menu == -->
+          <!-- == start hamburger == -->
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <!-- == end hamburger == -->
+        </nav>
+      </div>
+    </header>
+    <!-- ==== End Header ==== -->
+
+    <!-- ==== Start Main ==== -->
+    <main>
+      <!-- == start section destination == -->
+      <section class="destination">
+        <div class="destination-container">
+          <!-- == start destination heading == -->
+          <h5 class="heading-5 destination-heading">
+            <span>01</span> Pick your destination
+          </h5>
+          <!-- == end destination heading == -->
+          <!-- == start destination content == -->
+          <div class="destination-content">
+            <!-- == start destination content image == -->
+            <div class="destination-img">
+              <img id="destinationImg" />
+            </div>
+            <!-- == end destination content image == -->
+            <!-- == start destination content intro == -->
+            <div class="destination-intro">
+              <!-- == start destination content intro menu == -->
+              <ul class="destination-menu">
+                <li class="destination-item active" data-item="moon">MOON</li>
+                <li class="destination-item" data-item="mars">MARS</li>
+                <li class="destination-item" data-item="europa">EUROPA</li>
+                <li class="destination-item" data-item="titan">TITAN</li>
+              </ul>
+              <!-- == end destination content intro menu == -->
+              <h2
+                class="heading-2 destination-title"
+                id="destinationTitle"
+              ></h2>
+              <p class="bodytext destination-desc" id="destinationDesc"></p>
+              <hr />
+              <!-- == start destination content intro data == -->
+              <div class="destination-data">
+                <div>
+                  <div class="subheading-2">AVG. DISTANCE</div>
+                  <div class="subheading-1" id="distance"></div>
+                </div>
+                <div>
+                  <div class="subheading-2">EST. TRAVEL TIME</div>
+                  <div class="subheading-1" id="time"></div>
+                </div>
+              </div>
+              <!-- == end destination content intro data == -->
+            </div>
+            <!-- == end destination content intro == -->
+          </div>
+          <!-- == end destination content == -->
+        </div>
+      </section>
+      <!-- == end section destination == -->
+    </main>
+    <!-- ==== End Main ==== -->
+
+    <!-- ==== global js ==== -->
+    <script src="../../app/js/app.js"></script>
+    <!-- ==== destination js ==== -->
+    <script src="./destination.js"></script>
+  </body>
+</html>

@@ -1,0 +1,179 @@
+@use "../utilities/mixins" as *;
+
+.destination {
+  color: var(--white);
+  background: url("../img/destination/background-destination-desktop.jpg")
+    no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include breakpoints-down(medium) {
+    background: url("../img/destination/background-destination-tablet.jpg")
+      no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  @include breakpoints-down(small) {
+    background: url("../img/destination/background-destination-mobile.jpg")
+      no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &-container {
+    max-width: 1130px;
+    margin: 0 auto;
+    padding: 212px 10px 118px;
+
+    @include breakpoints-down(medium) {
+      max-width: 655px;
+      padding: 136px 10px 62px;
+    }
+
+    @include breakpoints-down(small) {
+      max-width: 347px;
+      padding: 88px 10px 58px;
+    }
+  }
+
+  &-heading {
+    margin-bottom: 64px;
+
+    @include breakpoints-down(medium) {
+      margin-bottom: 60px;
+    }
+
+    @include breakpoints-down(small) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &-content {
+    display: flex;
+    align-items: end;
+    gap: 0 157px;
+
+    @include breakpoints-down(medium) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 53px;
+    }
+    @include breakpoints-down(small) {
+      gap: 26px;
+    }
+  }
+
+  &-img {
+    width: 445px;
+    height: 445px;
+    @include breakpoints-down(medium) {
+      width: 300px;
+      height: 300px;
+    }
+
+    @include breakpoints-down(small) {
+      width: 170px;
+      height: 170px;
+    }
+  }
+
+  &-intro {
+    width: 445px;
+
+    @include breakpoints-down(medium) {
+      width: 87%;
+    }
+    @include breakpoints-down(small) {
+      width: 100%;
+    }
+  }
+
+  &-menu {
+    display: flex;
+    align-items: center;
+    gap: 0 36px;
+    margin-bottom: 37px;
+
+    @include breakpoints-down(medium) {
+      justify-content: center;
+      margin-bottom: 32px;
+    }
+    @include breakpoints-down(small) {
+      margin-bottom: 20px;
+      gap: 0 27px;
+    }
+  }
+
+  &-item {
+    padding: 12px 0;
+    font-family: var(--font-secondary);
+    font-size: 1.6rem;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+    color: var(--light);
+    cursor: pointer;
+
+    @include breakpoints-down(small) {
+      font-size: 1.4rem;
+      line-height: 17px;
+      letter-spacing: 2.3625px;
+    }
+
+    @include pseudo($top: 97%) {
+      width: 100%;
+      height: 3px;
+      background: var(--white);
+      opacity: 0;
+      transition: all 0.3s ease-in;
+    }
+
+    &:hover,
+    &.active {
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &-title {
+    margin-bottom: 32px;
+    @include breakpoints-down(medium) {
+      margin-bottom: 8px;
+    }
+    @include breakpoints-down(small) {
+      margin-bottom: 1px;
+    }
+  }
+
+  &-desc {
+    margin-bottom: 32px;
+  }
+
+  hr {
+    border: none;
+    height: 1px;
+    background: #383b4b;
+    margin-bottom: 32px;
+  }
+
+  &-data {
+    display: flex;
+    align-items: center;
+    gap: 0 68px;
+
+    @include breakpoints-down(medium) {
+      justify-content: space-evenly;
+      gap: 0 11px;
+    }
+    @include breakpoints-down(small) {
+      flex-direction: column;
+      gap: 32px 0;
+    }
+
+    .subheading-2 {
+      margin-bottom: 12px;
+    }
+  }
+}
