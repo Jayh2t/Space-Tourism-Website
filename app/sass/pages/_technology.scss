@@ -1,0 +1,161 @@
+@use "../utilities/mixins" as *;
+
+.technology {
+  background: url("../img/technology/background-technology-desktop.jpg")
+    no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &-container {
+    width: 100%;
+    color: var(--white);
+    padding: 212px 0 101px 9%;
+
+    @include breakpoints-down(medium) {
+      padding: 136px 0 97px;
+    }
+
+    @include breakpoints-down(small) {
+      padding: 88px 0 81px;
+    }
+  }
+
+  &-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 26px;
+
+    @include breakpoints-down(medium) {
+      gap: 60px;
+      margin-bottom: 56px;
+    }
+    @include breakpoints-down(small) {
+      gap: 32px;
+      margin-bottom: 34px;
+    }
+
+    h5 {
+      @include breakpoints-down(medium) {
+        padding-inline: 38.5px;
+      }
+      @include breakpoints-down(small) {
+        padding-inline: 24px;
+      }
+    }
+
+    img {
+      @include breakpoints-up(large) {
+        display: none;
+      }
+
+      @include breakpoints-down(medium) {
+        height: 310px;
+      }
+      @include breakpoints-down(small) {
+        height: 170px;
+      }
+    }
+  }
+
+  &-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-content {
+    width: 604px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 20px;
+
+    @include breakpoints-down(medium) {
+      width: 458px;
+      margin: 0 auto;
+      flex-direction: column;
+      justify-content: center;
+      gap: 44px;
+    }
+    @include breakpoints-down(medium) {
+      width: 327px;
+      gap: 26px;
+    }
+
+    .slides {
+      display: flex;
+      flex-direction: column;
+      gap: 32px 16px;
+
+      @include breakpoints-down(medium) {
+        flex-direction: row;
+      }
+
+      .slide {
+        width: 80px;
+        aspect-ratio: 1;
+        border-radius: 100%;
+        border: thin solid;
+        @include flex(center, center);
+
+        &.active {
+          background: var(--white);
+          color: var(--dark);
+        }
+
+        @include breakpoints-down(medium) {
+          width: 60px;
+        }
+        @include breakpoints-down(small) {
+          width: 40px;
+        }
+      }
+    }
+  }
+
+  &-info {
+    @include breakpoints-down(medium) {
+      width: 458px;
+      text-align: center;
+    }
+    @include breakpoints-down(small) {
+      width: 100%;
+    }
+  }
+
+  &-subtitle {
+    color: var(--light);
+    font-family: var(--font-secondary);
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+    margin-bottom: 11px;
+
+    @include breakpoints-down(medium) {
+      margin-bottom: 16px;
+    }
+
+    @include breakpoints-down(small) {
+      font-size: 1.4rem;
+      line-height: 17px;
+      letter-spacing: 2.3625px;
+    }
+  }
+
+  &-heading {
+    margin-bottom: 17px;
+
+    @include breakpoints-down(medium) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &-img {
+    width: 515px;
+    height: 527px;
+    @include breakpoints-down(medium) {
+      display: none;
+    }
+  }
+}

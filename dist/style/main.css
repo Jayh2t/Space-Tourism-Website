@@ -850,4 +850,177 @@ section {
   height: 100%;
 }
 
+.technology {
+  background: url("../img/technology/background-technology-desktop.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.technology-container {
+  width: 100%;
+  color: var(--white);
+  padding: 212px 0 101px 9%;
+}
+@media (max-width: 1023px) {
+  .technology-container {
+    padding: 136px 0 97px;
+  }
+}
+@media (max-width: 639px) {
+  .technology-container {
+    padding: 88px 0 81px;
+  }
+}
+.technology-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 26px;
+}
+@media (max-width: 1023px) {
+  .technology-header {
+    gap: 60px;
+    margin-bottom: 56px;
+  }
+}
+@media (max-width: 639px) {
+  .technology-header {
+    gap: 32px;
+    margin-bottom: 34px;
+  }
+}
+@media (max-width: 1023px) {
+  .technology-header h5 {
+    padding-inline: 38.5px;
+  }
+}
+@media (max-width: 639px) {
+  .technology-header h5 {
+    padding-inline: 24px;
+  }
+}
+@media (min-width: 1024px) {
+  .technology-header img {
+    display: none;
+  }
+}
+@media (max-width: 1023px) {
+  .technology-header img {
+    height: 310px;
+  }
+}
+@media (max-width: 639px) {
+  .technology-header img {
+    height: 170px;
+  }
+}
+.technology-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.technology-content {
+  width: 604px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 20px;
+}
+@media (max-width: 1023px) {
+  .technology-content {
+    width: 458px;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    gap: 44px;
+  }
+}
+@media (max-width: 1023px) {
+  .technology-content {
+    width: 327px;
+    gap: 26px;
+  }
+}
+.technology-content .slides {
+  display: flex;
+  flex-direction: column;
+  gap: 32px 16px;
+}
+@media (max-width: 1023px) {
+  .technology-content .slides {
+    flex-direction: row;
+  }
+}
+.technology-content .slides .slide {
+  width: 80px;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  border: thin solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+.technology-content .slides .slide.active {
+  background: var(--white);
+  color: var(--dark);
+}
+@media (max-width: 1023px) {
+  .technology-content .slides .slide {
+    width: 60px;
+  }
+}
+@media (max-width: 639px) {
+  .technology-content .slides .slide {
+    width: 40px;
+  }
+}
+@media (max-width: 1023px) {
+  .technology-info {
+    width: 458px;
+    text-align: center;
+  }
+}
+@media (max-width: 639px) {
+  .technology-info {
+    width: 100%;
+  }
+}
+.technology-subtitle {
+  color: var(--light);
+  font-family: var(--font-secondary);
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+  margin-bottom: 11px;
+}
+@media (max-width: 1023px) {
+  .technology-subtitle {
+    margin-bottom: 16px;
+  }
+}
+@media (max-width: 639px) {
+  .technology-subtitle {
+    font-size: 1.4rem;
+    line-height: 17px;
+    letter-spacing: 2.3625px;
+  }
+}
+.technology-heading {
+  margin-bottom: 17px;
+}
+@media (max-width: 1023px) {
+  .technology-heading {
+    margin-bottom: 16px;
+  }
+}
+.technology-img {
+  width: 515px;
+  height: 527px;
+}
+@media (max-width: 1023px) {
+  .technology-img {
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
